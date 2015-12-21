@@ -52,9 +52,22 @@ group :development, :test do
   gem 'rspec-activemodel-mocks'
 end
 
+##### Test-specific Utilities #####
+
 group :test do
-  gem 'cucumber-rails', '~> 1.4.2', :require => false
-  gem 'database_cleaner', '~> 1.4.1'
+
+  # Testing output
+  gem 'minitest-reporters', '~> 1.0.0'
+
+  # Feature tests
+  gem 'minitest-rails-capybara', '~> 2.1.0'
+
+  # Cucumber specs
+  gem 'cucumber-rails', '~> 1.4.0', require: false
+
+  # Clean the database for tests
+  gem 'database_cleaner', '~> 1.4.0'
+
 end
 
 	# use bootstrap
